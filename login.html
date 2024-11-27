@@ -11,8 +11,12 @@
   <body>
     <br>
     <div class="container text-center rounded" style="background-color:rgb(212, 212, 212); width:40%; height:auto;"><br>
-        <div class="imagen"><img src="caflogo.png" alt="CAF Logo" style="width:50%;"></div>
-        <form action="Ingresa.php" method="post">
+        <div class="imagen">
+            <a href="index.php">
+                <img src="caflogo.png" alt="CAF Logo" style="width: 60%;">
+            </a>
+        </div>
+      <form action="Ingresa.php" method="post">
           <input type="text" placeholder="Nombre de usuario" class="form-control my-3" name="usuario" id="usuario" required title="Ingrese nombre de usuario"><br>
           <input type="text" placeholder="Contraseña" class="form-control my-3" name="contra" id="contra" required title="Ingrese la contraseña"><br>
           <input type="submit" class="btn boton" value="Ingresar"><a href="CrearCuenta.html" class="btn boton">Crear Cuenta</a>

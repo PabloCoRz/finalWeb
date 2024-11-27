@@ -157,7 +157,7 @@ function obtenerHistorialOrdenes() {
   return $ordenes;
 }
 
-function plantillaOrden($orden) {
+function plantillaOrden($orden,$page) {
   echo("<div class='container mb-4'>");
   echo("<div class='card'>");
   echo("<div class='card-header'>");
@@ -187,18 +187,20 @@ function plantillaOrden($orden) {
       echo("</ul>");
   echo("</div>");
   echo("</div>");
+  if($page == 'dashboard'){
   echo('<form action="cambiar_estado.php" method="post" style="display:inline;">');
   echo('<input type="hidden" name="order_id" value="' . $orden->ticket_id .  '">');
   echo('<button type="submit" class="btn btn-primary m-2">Completar orden</button>');
   echo('</form>');
+  }
   echo("</div>");
   echo("</div>");
 }
 
-function mostrarOrdenes($ordenes) {
+function mostrarOrdenes($ordenes,$page) {
   for ($i = 0; $i < count($ordenes); $i++) {
     $orden = $ordenes[$i];
-    plantillaOrden($orden);
+    plantillaOrden($orden,$page);
   }
 }
 

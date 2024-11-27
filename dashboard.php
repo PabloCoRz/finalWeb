@@ -1,7 +1,9 @@
+
+
 <?php
 include_once 'funciones/DB.php'; // Incluir getDB()
 require 'ordenes.php'; // Incluir la clase Orden y las funciones para cargarlas de la db
-
+$page = 'dashboard';
 if (isset($_GET['mensaje'])) {
   $mensaje = $_GET['mensaje'];
   echo "<script>";
@@ -88,7 +90,7 @@ function mostrarCotizaciones($cotizaciones) {
       echo("<h1 class='display-1'>No hay órdenes</h1>");
       echo("</div>");
     } else {
-      mostrarOrdenes($ordenes);
+      mostrarOrdenes($ordenes,$page);
     }
 
     $cotizaciones = obtenerCotizaciones();

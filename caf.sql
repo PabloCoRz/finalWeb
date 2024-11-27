@@ -96,10 +96,10 @@ INSERT INTO cliente(nombre, telefono) VALUES
 ("Alejandro Garcia","1234567800");
 
 INSERT INTO ticket (cliente_id, fecha_compra, fecha_entrega, anticipo, precio_total) VALUES
-(1, CURDATE(), CURDATE() + INTERVAL 3 DAY, 50.00, 250.00),
-(2, CURDATE(), CURDATE() + INTERVAL 4 DAY, 100.00, 400.00),
-(3, CURDATE(), CURDATE() + INTERVAL 3 DAY, 30.00, 170.00),
-(4, CURDATE(), CURDATE() + INTERVAL 4 DAY, 75.00, 300.00);
+(1, CURDATE(), CURDATE() + INTERVAL 3 DAY, 50.00, 150.00),
+(2, CURDATE(), CURDATE() + INTERVAL 4 DAY, 100.00, 150.00),
+(3, CURDATE(), CURDATE() + INTERVAL 3 DAY, 30.00, 200.00),
+(4, CURDATE(), CURDATE() + INTERVAL 4 DAY, 75.00, 170.00);
 
 INSERT INTO servicio_ticket (ticket_id, servicio_id, articulo, imagen, comentario) VALUES
 (1, 3, 'Zapatos', 'imagenes/tickets/imagen_zapatos.jpg', 'Resanado incluido'),
@@ -108,3 +108,4 @@ INSERT INTO servicio_ticket (ticket_id, servicio_id, articulo, imagen, comentari
 (4, 9, 'Bolsa pequeña', 'imagenes/tickets/imagen_bolsa.jpg', 'Limpieza a detalle e hidratación');
 
 
+insert into usuario(usuario, passwd) values ('admin', 'admin');

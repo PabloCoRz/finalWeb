@@ -1,6 +1,7 @@
 <?php
 include_once 'funciones/DB.php'; // Incluir getDB()
 require 'ordenes.php'; // Incluir la clase Orden y las funciones para cargarlas de la db
+$page = 'historialOrdenes';
 ?>
 
 <!doctype html>
@@ -31,7 +32,7 @@ require 'ordenes.php'; // Incluir la clase Orden y las funciones para cargarlas 
       echo("<h1 class='display-1'>No hay órdenes</h1>");
       echo("</div>");
     } else {
-      mostrarOrdenes($ordenes);
+      mostrarOrdenes($ordenes,$page);
     }
  include 'footer.php'; ?>
 
