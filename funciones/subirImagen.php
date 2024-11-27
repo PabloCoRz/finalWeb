@@ -35,9 +35,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
   throw new Exception("Solo se aceptan archivos tipo JPG, JPEG y PNG.");
 }
 
-// if everything is ok, try to upload file
 if (move_uploaded_file($file["tmp_name"], $target_file)) {
-  //echo "The file ". htmlspecialchars(basename($file["name"])). " has been uploaded.";
   return htmlspecialchars($target_file);
 } else {
     throw new Exception("Hubo un error al subir el archivo.");
