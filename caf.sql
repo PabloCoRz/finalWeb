@@ -102,12 +102,9 @@ INSERT INTO ticket (cliente_id, fecha_compra, fecha_entrega, anticipo, precio_to
 (4, CURDATE(), CURDATE() + INTERVAL 4 DAY, 75.00, 300.00);
 
 INSERT INTO servicio_ticket (ticket_id, servicio_id, articulo, imagen, comentario) VALUES
-(1, 1, 'Zapatos', 'imagen_zapatos.jpg', 'Limpieza básica'),
-(1, 3, 'Zapatos', 'imagen_zapatos.jpg', 'Resanado incluido'),
-(2, 2, 'Zapatos de cuero', 'imagen_cuero.jpg', 'Limpieza completa y desinfección'),
-(2, 11, 'Zapatos de cuero', 'imagen_cuero.jpg', 'Resanado en piel'),
-(3, 6, 'Gorra deportiva', 'imagen_gorra.jpg', 'Limpieza completa'),
-(4, 9, 'Bolsa pequeña', 'imagen_bolsa.jpg', 'Limpieza a detalle e hidratación'),
-(4, 12, 'Bolsa pequeña', 'imagen_bolsa.jpg', 'Blanqueamiento en media suela');
+(1, 3, 'Zapatos', 'imagenes/tickets/imagen_zapatos.jpg', 'Resanado incluido'),
+(2, 11, 'Zapatos de cuero', 'imagenes/tickets/imagen_cuero.jpg', 'Resanado en piel'),
+(3, 6, 'Gorra deportiva', 'imagenes/tickets/imagen_gorra.jpg', 'Limpieza completa'),
+(4, 9, 'Bolsa pequeña', 'imagenes/tickets/imagen_bolsa.jpg', 'Limpieza a detalle e hidratación');
 
 
