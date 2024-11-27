@@ -1,7 +1,9 @@
-<div class="pie bg-dark text-white py-4">
+<div class="footer bg-dark text-white">
     <div class="container text-center">
+    <br>
         <div class="row">
             <!-- Redes sociales -->
+            
             <div class="col-md-4">
                 <h5>Síguenos</h5>
                 <ul class="list-unstyled d-flex flex-column align-items-center">
