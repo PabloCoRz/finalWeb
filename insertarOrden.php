@@ -61,7 +61,7 @@ function insertarOrden($cliente_id, $precio, $anticipo, $fecha_entrega, $articul
 
         if ($imagen['error'] === UPLOAD_ERR_OK) {
             // Definir la ruta de destino para la imagen
-            $ruta_destino = 'Imagenes/' . basename($imagen['name']);
+            $ruta_destino = 'Imagenes/tikets' . basename($imagen['name']);
 
             // Mover la imagen subida a la ruta de destino
             if (!move_uploaded_file($imagen['tmp_name'], $ruta_destino)) {
