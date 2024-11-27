@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 <hr>
-
+<div class="container text-center" style="border: 2px solid #ccc; border-radius: 15px; padding: 20px; width:70%">
     <div class="container text-center">
       <div class="row">        
         <div class="col sub">
@@ -257,6 +257,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
     </div>
     </div>
+
+  </div><br><br><br>
 
   <?php include 'footer.php'; ?>
 

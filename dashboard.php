@@ -43,6 +43,10 @@ function mostrarCotizaciones($cotizaciones) {
     echo("<div class='text-center'><img src='$cotizacion[imagen]' class='img-fluid' style='height:200px' alt='Imagen de la cotización'></div><br>");
     echo("<button type='button' class='btn btn-primary' data-bs-target='#pasaAOrdenes'>Crear orden de cotizaci&oacute;n</button>");
     echo("</div>");
+    echo("<form method='post' action='NuevaOrden.php'>");
+    echo("<input type='hidden' name='cotizacion_id' value='" . $cotizacion['cotizacion_id'] . "'>");
+    echo("<button type='submit' class='btn btn-primary'>Crear orden de cotizaci&oacute;n</button>");
+    echo("</form>");
     echo("</div>");
     echo("</div>");
   }
