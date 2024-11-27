@@ -113,31 +113,7 @@ function obtenerServicios() {
             </div>
         </template>
         <div id="articulos-container">
-            <div class="container bg-light rounded p-3 articulo mt-3 mb-3">
-                <div class="mb-3">
-                    <label for="servicio_id" class="form-label">Servicio</label>
-                    <select class="form-control servicio_id" id="servicio_id" name="servicio_id[]" required> 
-                        <?php
-                        $servicios = obtenerServicios();
-                        foreach ($servicios as $servicio) {
-                            echo "<option value='{$servicio['servicio_id']}'>{$servicio['nombre']}</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="articulo" class="form-label">Artículo</label>
-                    <input type="text" class="form-control" id="articulo" name="articulo[]" required> 
-                </div>
-                <div class="mb-3">
-                    <label for="imagen" class="form-label">Imagen</label>
-                    <input type="file" class="form-control" id="imagen" name="imagen[]" accept="image/*" required> 
-                </div>
-                <div class="mb-3">
-                    <label for="comentario" class="form-label">Comentario</label>
-                    <textarea class="form-control" id="comentario" name="comentario[]" rows="3"></textarea> 
-                </div>
-            </div>
+            
         </div>
         <button type="button" class="btn btn-primary m-2" id="agregar_articulo">Agregar Artículo</button>
         <div class="mb-3">
@@ -167,30 +143,10 @@ function obtenerServicios() {
         });
 
         $('#agregar_articulo').click(function() {
-            var articuloClone = $('.articulo:first').clone();
-            var index = $('#articulos-container .articulo').length;
-
-            articuloClone.find('input, textarea').val('');
-
-            articuloClone.find('select').select2('destroy').removeAttr('data-select2-id').removeAttr('aria-hidden').removeClass('select2-hidden-accessible');
-
-            articuloClone.find('select').attr('id', 'servicio_id_' + index).select2({
-                placeholder: "Seleccione un servicio",
-                allowClear: true
-            });
-
-            articuloClone.find('input[id^="articulo"]').attr('id', 'articulo_' + index);
-            articuloClone.find('input[id^="imagen"]').attr('id', 'imagen_' + index);
-            articuloClone.find('textarea[id^="comentario"]').attr('id', 'comentario_' + index);
-
-            $('#articulos-container').append(articuloClone);
-        });
-        $('#agregar_articulo').click(function() {
             var template = document.getElementById('articulo-template');
             var clone = document.importNode(template.content, true);
             var index = $('#articulos-container .articulo').length;
 
-            // Update the IDs of the cloned elements to ensure they are unique
             $(clone).find('select').attr('id', 'servicio_id_' + index).select2({
                 placeholder: "Seleccione un servicio",
                 allowClear: true
@@ -200,7 +156,6 @@ function obtenerServicios() {
             $(clone).find('input[id^="imagen"]').attr('id', 'imagen_' + index);
             $(clone).find('textarea[id^="comentario"]').attr('id', 'comentario_' + index);
 
-            // Append the cloned article to the container
             $('#articulos-container').append(clone);
         });
     });
