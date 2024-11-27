@@ -37,16 +37,20 @@ function mostrarCotizaciones($cotizaciones) {
     echo("</div>");
     echo("<div class='card-body'>");
     echo("<p class='card-text'>Fecha: " . $cotizacion['fecha'] . "</p>");
-    echo("<p class='card-text'>Cliente: " . $cotizacion['nombre'] . "</p>");
+    echo("<p class='card-text'>Cliente: " . $cotizacion['nombre'] . " " . $cotizacion['apellidos'] . "</p>");
     echo("<p class='card-text'>Teléfono: " . $cotizacion['telefono'] . "</p>");
     echo("<p class='card-text'>" . $cotizacion['comentarios'] . "</p>");
     echo("<div class='text-center'><img src='$cotizacion[imagen]' class='img-fluid' style='height:200px' alt='Imagen de la cotización'></div><br>");
-    echo("<button type='button' class='btn btn-primary' data-bs-target='#pasaAOrdenes'>Crear orden de cotizaci&oacute;n</button>");
-    echo("</div>");
     echo("<form method='post' action='NuevaOrden.php'>");
-    echo("<input type='hidden' name='cotizacion_id' value='" . $cotizacion['cotizacion_id'] . "'>");
+    echo("<input type='hidden' name='cotizacion_id' id='cotizacion_id' value='" . $cotizacion['cotizacion_id'] . "'>");
+    echo("<input type='hidden' name='fecha' id='fecha' value='" . $cotizacion['fecha'] . "'>");
+    echo("<input type='hidden' name='nombre' id='nombre' value='" . $cotizacion['nombre'] . " " . $cotizacion['apellidos'] . "'>");
+    echo("<input type='hidden' name='telefono' id='telefono' value='" . $cotizacion['telefono'] . "'>");
+    echo("<input type='hidden' name='comentarios' id='comentarios' value='" . $cotizacion['comentarios'] . "'>");
+    echo("<input type='hidden' name='imagen' id='imagen' value='" . $cotizacion['imagen'] . "'>");
     echo("<button type='submit' class='btn btn-primary'>Crear orden de cotizaci&oacute;n</button>");
     echo("</form>");
+    echo("</div>");
     echo("</div>");
     echo("</div>");
   }

@@ -22,7 +22,8 @@
             <ul class="navbar-nav">
             <?php
             session_start();
-            if (isset($_SESSION["usuario"])) { 
+            if (isset($_SESSION["usuario"])) {
+            echo("<a href='NuevaOrden.php' class='nav-link " . ($page == "NuevaOrden" ? "active" : "") . "' aria-current='page'>NuevaOrdern</a>");
             echo("<a href='dashboard.php' class='nav-link " . ($page == "dashboard" ? "active" : "") . "' aria-current='page'>Dashboard</a>");
             echo("<a href='historialOrdenes.php' class='nav-link " . ($page == "historialOrdenes" ? "active" : "") . "' aria-current='page'>Historial Órdenes</a>");
             echo("<a href='funciones/cerrar_sesion.php' class='nav-link'>Cerrar Sesión</a>");
